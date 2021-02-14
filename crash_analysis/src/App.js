@@ -1,10 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {Component} from 'react';
-import {DefaultButton} from 'pivotal-ui/react/buttons';
 import {Siteframe} from 'pivotal-ui/react/siteframe';
 import {Icon} from 'pivotal-ui/react/iconography';
-import {Panel} from 'pivotal-ui/react/panels';
 import MapView from "./pages/map-view";
 import TableView from "./pages/table-view";
 import {
@@ -12,11 +9,17 @@ import {
   Switch,
   Route,
   Link,
+  NavLink,
   useRouteMatch
 } from "react-router-dom";
 import Domains from './pages/domains';
+import React, { useState, useEffect, useRef } from 'react';
 
 function App() {
+
+  useEffect(() => { 
+  }, []);
+
   return (
     
     
@@ -32,11 +35,11 @@ function App() {
       primaryLinks: [
         {text: 'Home', link: '/'}, 
         {text: 'Map', link: '/map'},
-        {text: 'Table', link: '/table'},
+        {text: 'Table', link: '/table', active: true},
         {text: 'About us', link: '/about-us'}
       ],
       secondaryLinks: [{text: 'Docs', link: '/docs'}, {text: 'Contact us', link: '/contact-us'}],
-      renderLink: ({text, link}) => <Link  to={link}>{text}</Link>
+      renderLink: ({text, link}) => <NavLink  to={link} activeClassName="active">{text}</NavLink>
     }
   }}>
     <div className="bg-light-gray pal" style={{height: '100%'}}>
