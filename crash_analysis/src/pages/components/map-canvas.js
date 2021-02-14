@@ -37,6 +37,7 @@ const MapCanvas = () => {
               
               map.on('load', () => {
                 map.addLayer(myDeckLayer);
+                
               });
 
             // Clean up on unmount

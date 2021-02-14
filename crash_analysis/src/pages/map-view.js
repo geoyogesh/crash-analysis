@@ -1,7 +1,10 @@
 import MapCanvas from './components/map-canvas';
+import {Panel} from 'pivotal-ui/react/panels';
 
 const MapView = () => {
-    return ( <MapCanvas/> );
+    return ( <Panel {...{title: 'MapCanvas'}}>
+    <MapCanvas/>
+  </Panel> );
 }
 
 export default MapView;

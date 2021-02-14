@@ -51,7 +51,7 @@ function App() {
             <TableView />
           </Route>
           <Route path="/">
-            <Domains />
+            <MapView />
           </Route>
         </Switch>
     </div>

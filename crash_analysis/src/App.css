@@ -1,7 +1,11 @@
+
 a {
     text-decoration: none;
 }
 
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+     background-color: transparent; 
+}
 .mapContainer {
     position: absolute;
     top: 60px;
