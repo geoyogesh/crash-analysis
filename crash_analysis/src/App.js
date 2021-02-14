@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Siteframe } from 'pivotal-ui/react/siteframe';
 import { Icon } from 'pivotal-ui/react/iconography';
@@ -9,11 +8,10 @@ import {
   Switch,
   Route,
   Link,
-  NavLink,
-  useRouteMatch
+
 } from "react-router-dom";
 import Domains from './pages/domains';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
 
