@@ -1,6 +1,6 @@
 import {Table, Caption, Thead, Tbody, Tfoot, Tr, Th, Td, TrHeaderForDrawers, TrWithoutDrawer, TrWithDrawer} from 'pivotal-ui/react/table';
 import {Panel} from 'pivotal-ui/react/panels';
-function TableView() {
+const TableView = () => {
     return ( 
         <Panel {...{title: 'Table View'}}>
         <Table className="pui-table--tr-hover">

@@ -1,6 +1,6 @@
 import {Panel} from 'pivotal-ui/react/panels';
 
-function Domains() {
+const Domains = () => {
     return (
     <Panel {...{title: 'Domains'}}>
       These are the domains.
