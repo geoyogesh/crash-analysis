@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Domains from './pages/domains';
 import React, { useState, useEffect } from 'react';
+import MapViewJuris from './pages/map-view-juris';
 
 function App() {
 
@@ -34,7 +35,8 @@ function App() {
           sidebarProps: {
             primaryLinks: [
               { text: 'Home', link: '/', active: activeRoute === '/' },
-              { text: 'Map', link: '/map', active: activeRoute === '/map' },
+              { text: 'Crash Map', link: '/map', active: activeRoute === '/map' },
+              { text: 'Juris Map', link: '/map-juris', active: activeRoute === '/map-juris' },
               { text: 'Table', link: '/table', active: activeRoute === '/table' },
               { text: 'About us', link: '/about-us', active: activeRoute === '/about-us' }
             ],
@@ -52,6 +54,9 @@ function App() {
               </Route>
               <Route path="/map">
                 <MapView />
+              </Route>
+              <Route path="/map-juris">
+                <MapViewJuris />
               </Route>
               <Route path="/table">
                 <TableView />
