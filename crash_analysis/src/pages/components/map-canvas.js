@@ -12,15 +12,15 @@ const MapCanvas = () => {
         const map = new mapboxgl.Map({
             container: mapContainerRef.current,
             style: 'mapbox://styles/mapbox/streets-v11',
-            center:  [-77.79218893867733, 37.82963522630058],
-            zoom: 6
+            center:  [-92.7335869233902, 39.40892456030255], // start at USA zoom level
+            zoom: 3
             });
 
             // Add navigation control (the +/- zoom buttons)
             map.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
             map.on('move', () => {
-                console.log(map.getCenter());
+                console.log(map.getCenter(), map.getZoom(), map.getBearing(), map.getPitch());
               });
 
               const myDeckLayer = new MapboxLayer({
@@ -37,8 +37,24 @@ const MapCanvas = () => {
               
               map.on('load', () => {
                 map.addLayer(myDeckLayer);
-                
+
+                // fly to virginia state
+                /*
+                map.flyTo({
+                center: [-77.79218893867733, 37.82963522630058],
+                zoom: 6,
+                speed: 0.3
+                });
+                */
+               map.flyTo({
+                center: [-77.79218893867733, 37.82963522630058],
+                zoom: 6,
+                //pitch: 50,
+                speed: 0.3
+                });
               });
+
+              
 
             // Clean up on unmount
             return () => map.remove();
