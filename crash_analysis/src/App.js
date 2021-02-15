@@ -15,7 +15,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [activeRoute, setActiveRoute]= useState( '/' );
+  const [activeRoute, setActiveRoute] = useState('/');
 
   useEffect(() => {
   }, []);
@@ -33,13 +33,13 @@ function App() {
           },
           sidebarProps: {
             primaryLinks: [
-              { text: 'Home', link: '/', active: activeRoute === '/'},
-              { text: 'Map', link: '/map' , active: activeRoute === '/map'},
+              { text: 'Home', link: '/', active: activeRoute === '/' },
+              { text: 'Map', link: '/map', active: activeRoute === '/map' },
               { text: 'Table', link: '/table', active: activeRoute === '/table' },
-              { text: 'About us', link: '/about-us' , active: activeRoute === '/about-us'}
+              { text: 'About us', link: '/about-us', active: activeRoute === '/about-us' }
             ],
             secondaryLinks: [
-              { text: 'Docs', link: '/docs' }, 
+              { text: 'Docs', link: '/docs' },
               { text: 'Contact us', link: '/contact-us' }
             ],
             renderLink: ({ text, link }) => <Link to={link} onClick={() => setActiveRoute(link)}>{text}</Link>
