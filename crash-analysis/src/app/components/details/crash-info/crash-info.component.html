@@ -1,0 +1,22 @@
+<div ibmRow style="height: calc(100vh - 48px);">
+  <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 4}">
+    <div style="width: 300px">
+      <ibm-dropdown [label]="'Dropdown label'"
+      [helperText]="'Optional helper text.'"
+      [size]="'md'"
+      [dropUp]="false"
+      [invalid]="false"
+      [invalidText]="'This is not a validation text'"
+      [warn]="false"
+      [warnText]="'This is a warning'"
+      [theme]="'dark'"
+      placeholder="Select"
+      [disabled]="false"></ibm-dropdown>
+      <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+    </div>
+  </div>
+
+  <div ibmCol [columnNumbers]="{'lg': 12, 'md': 12, 'sm': 12}">
+    <app-map-canvas></app-map-canvas>
+  </div>
+</div>

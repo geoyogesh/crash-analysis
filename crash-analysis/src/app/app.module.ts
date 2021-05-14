@@ -1,18 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { GridModule, IconModule, UIShellModule } from 'carbon-components-angular';
+import { BreadcrumbModule, DropdownModule, GridModule, IconModule, Label, UIShellModule } from 'carbon-components-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/common/header/header.component';
 import { AddModule, FadeModule } from '@carbon/icons-angular';
 import { CarbonModule } from '@carbon/icons-angular';
+import { MapCanvasComponent } from './components/common/map-canvas/map-canvas.component';
+import { CrashMapComponent } from './components/map-pages/crash-map/crash-map.component';
+import { JurisMapComponent } from './components/map-pages/juris-map/juris-map.component';
+import { CrashInfoComponent } from './components/details/crash-info/crash-info.component';
+import { RouteInfoComponent } from './components/details/route-info/route-info.component';
+import { IntersectionInfoComponent } from './components/details/intersection-info/intersection-info.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MapCanvasComponent,
+    CrashMapComponent,
+    JurisMapComponent,
+    CrashInfoComponent,
+    RouteInfoComponent,
+    IntersectionInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +35,10 @@ import { CarbonModule } from '@carbon/icons-angular';
     AddModule,
     CarbonModule,
     FadeModule,
-    GridModule
+    GridModule,
+    DropdownModule,
+    ReactiveFormsModule,
+    BreadcrumbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
