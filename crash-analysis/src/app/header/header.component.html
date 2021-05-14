@@ -1,0 +1,34 @@
+<ng-template #brandTemplate>
+  <a class="bx--header__name">
+    <ibm-icon-carbon size="32" style="stroke:white;fill:white"></ibm-icon-carbon>
+    <span class="bx--header__name--prefix">Crash</span>
+    Analysis
+  </a>
+</ng-template>
+
+
+<ibm-header [route]="['/home']" name="Crash Analysis" [brand]="brandTemplate">
+	<ibm-header-navigation ariaLabel="Crash Analysis">
+    <ibm-header-item [route]="['/dashboard']">Dashboard</ibm-header-item>
+    <ibm-header-item [route]="['/summary']">Summary/Export</ibm-header-item>
+    <ibm-header-item [route]="['/juris-map']">Juris Map</ibm-header-item>
+    <ibm-header-item [route]="['/crash-info']">Crash Info</ibm-header-item>
+    <ibm-header-item [route]="['/route-info']">Route Info</ibm-header-item>
+    <ibm-header-item [route]="['/crash-info']">Crash by MP</ibm-header-item>
+    <ibm-header-item [route]="['/intersection-info']">Intersection Info</ibm-header-item>
+    <ibm-header-item [route]="['/people-injured']">People Injured</ibm-header-item>
+    <ibm-header-item [route]="['/home']">User Guide</ibm-header-item>
+		<ibm-header-item [route]="['/repos']">Repositories</ibm-header-item>
+	</ibm-header-navigation>
+	<ibm-header-global>
+		<ibm-header-action title="action">
+			<svg icon ibmIconNotification20></svg>
+		</ibm-header-action>
+		<ibm-header-action title="action">
+			<svg icon ibmIconUserAvatar20></svg>
+		</ibm-header-action>
+		<ibm-header-action title="action">
+			<svg icon ibmIconAppSwitcher20></svg>
+		</ibm-header-action>
+	</ibm-header-global>
+</ibm-header>
