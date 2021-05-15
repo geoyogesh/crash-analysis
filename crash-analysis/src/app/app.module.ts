@@ -6,7 +6,18 @@ import { BreadcrumbModule, ButtonModule, CheckboxModule, DropdownModule, GridMod
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/common/header/header.component';
-import { AddModule, ApplicationModule, ChartAreaModule, FadeModule, GlobeModule, PersonFavoriteModule } from '@carbon/icons-angular';
+import {
+  AccessibilityModule,
+  AddModule,
+  ApplicationModule,
+  AppSwitcherModule,
+  ChartAreaModule,
+  FadeModule,
+  GlobeModule,
+  NotificationModule,
+  PersonFavoriteModule,
+  UserAvatarModule
+} from '@carbon/icons-angular';
 import { CarbonModule } from '@carbon/icons-angular';
 import { MapCanvasComponent } from './components/common/map-canvas/map-canvas.component';
 import { CrashMapComponent } from './components/map-pages/crash-map/crash-map.component';
@@ -64,7 +75,11 @@ import { InfoCardComponent } from './components/common/info/info-card/info-card.
 		GlobeModule,
 		ApplicationModule,
 		LinkModule,
-		PaginationModule
+		PaginationModule,
+    NotificationModule,
+    AccessibilityModule,
+    UserAvatarModule,
+    AppSwitcherModule
   ],
   providers: [],
   bootstrap: [AppComponent]
