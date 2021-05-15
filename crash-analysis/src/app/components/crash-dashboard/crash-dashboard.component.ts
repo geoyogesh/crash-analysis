@@ -71,7 +71,10 @@ export class CrashDashboardComponent implements OnInit {
         scaleType: 'linear',
       },
     },
-    curve: 'curveNatural'
+    curve: 'curveNatural',
+    legend: {
+      alignment: 'center',
+    },
   };
 
   data1 = [
@@ -106,6 +109,9 @@ export class CrashDashboardComponent implements OnInit {
         mapsTo: 'group',
         scaleType: 'labels',
       },
+    },
+    legend: {
+      alignment: 'center',
     }
   };
   data2 = [
@@ -220,6 +226,9 @@ export class CrashDashboardComponent implements OnInit {
         scaleType: 'labels',
         mapsTo: 'key',
       },
+    },
+    legend: {
+      alignment: 'center',
     }
   };
 
@@ -408,7 +417,8 @@ export class CrashDashboardComponent implements OnInit {
     },
     legend: {
       enabled: false,
-    },
+      alignment: 'center',
+    }
   };
   constructor() {}
 
