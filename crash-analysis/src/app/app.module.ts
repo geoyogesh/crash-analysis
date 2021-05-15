@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BreadcrumbModule, DropdownModule, GridModule, IconModule, Label, UIShellModule } from 'carbon-components-angular';
+import { BreadcrumbModule, CheckboxModule, DropdownModule, GridModule, IconModule, Label, TableModule, TilesModule, UIShellModule } from 'carbon-components-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     DropdownModule,
     ReactiveFormsModule,
     BreadcrumbModule,
+    CheckboxModule,
+    TilesModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

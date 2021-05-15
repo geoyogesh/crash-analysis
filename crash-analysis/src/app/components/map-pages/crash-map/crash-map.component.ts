@@ -12,4 +12,12 @@ export class CrashMapComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onIndeterminateChange(evt: any) {
+
+  }
+
+  onChange (evt: any) {
+    
+  }
+
 }

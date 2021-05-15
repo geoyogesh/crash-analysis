@@ -1,22 +1,41 @@
-<div ibmRow style="height: calc(100vh - 48px);">
-  <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 4}">
-    <div style="width: 300px">
-      <ibm-dropdown [label]="'Dropdown label'"
-      [helperText]="'Optional helper text.'"
-      [size]="'md'"
-      [dropUp]="false"
-      [invalid]="false"
-      [invalidText]="'This is not a validation text'"
-      [warn]="false"
-      [warnText]="'This is a warning'"
-      [theme]="'dark'"
-      placeholder="Select"
-      [disabled]="false"></ibm-dropdown>
-      <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+<div class="bx--grid" style="padding: 15px;">
+  <div ibmRow style="height: calc(100vh - 48px);">
+    <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 4}">
+      <div style="width: 300px">
+        <ibm-dropdown [label]="'Dropdown label'"
+        [helperText]="'Optional helper text.'"
+        [size]="'md'"
+        [dropUp]="false"
+        [invalid]="false"
+        [invalidText]="'This is not a validation text'"
+        [warn]="false"
+        [warnText]="'This is a warning'"
+        [theme]="'dark'"
+        placeholder="Select"
+        [disabled]="false">
+        <ibm-dropdown-list [items]="items"></ibm-dropdown-list>
+      </ibm-dropdown>
+
+      </div>
+    </div>
+
+    <div ibmCol [columnNumbers]="{'lg': 12, 'md': 12, 'sm': 12}">
+      <ibm-table-container>
+        <ibm-table-header>
+          <h4 ibmTableHeaderTitle>Table Title</h4>
+          <p ibmTableHeaderDescription>with no data</p>
+        </ibm-table-header>
+        <ibm-table
+            [skeleton]="false"
+            [model]="emptyModel"
+            [size]="'md'"
+            [showSelectionColumn]="true"
+            [striped]="true"
+            [isDataGrid]="false">
+            <tbody><tr><td class="no-data" colspan="3"><div>No data.</div></td></tr></tbody>
+          </ibm-table>
+      </ibm-table-container>
     </div>
   </div>
-
-  <div ibmCol [columnNumbers]="{'lg': 12, 'md': 12, 'sm': 12}">
-    <app-map-canvas></app-map-canvas>
-  </div>
 </div>
+

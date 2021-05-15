@@ -1,1 +1,31 @@
-<p>crash-map works!</p>
+<div ibmRow style="height: calc(100vh - 48px);">
+  <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 4}">
+    <fieldset class="bx--fieldset">
+      <legend class="bx--label">Checkbox</legend>
+      <ibm-checkbox
+        [checked]="true"
+        [hideLabel]="false"
+        (change)="onChange($event)">
+        Checkbox
+      </ibm-checkbox>
+      <ibm-checkbox
+        [indeterminate]="true"
+        (change)="onChange($event)"
+        [hideLabel]="false"
+        (indeterminateChange)="onIndeterminateChange($event)">
+        Indeterminate checkbox
+      </ibm-checkbox>
+      <ibm-checkbox
+        [disabled]="true"
+        (change)="onChange($event)"
+        [hideLabel]="false"
+        (indeterminateChange)="onIndeterminateChange($event)">
+        Disabled checkbox
+      </ibm-checkbox>
+    </fieldset>
+  </div>
+
+  <div ibmCol [columnNumbers]="{'lg': 12, 'md': 12, 'sm': 12}">
+    <app-map-canvas></app-map-canvas>
+  </div>
+</div>

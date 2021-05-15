@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListItem } from 'carbon-components-angular';
+import { ListItem, TableHeaderItem, TableModel } from 'carbon-components-angular';
 
 @Component({
   selector: 'app-crash-info',
@@ -8,10 +8,15 @@ import { ListItem } from 'carbon-components-angular';
 })
 export class CrashInfoComponent implements OnInit {
 
+  emptyModel = new TableModel();
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {
+    this.emptyModel.header = [
+      new TableHeaderItem({data: "Name"}), new TableHeaderItem({data: "hwer", style: {"width": "auto"} })
+    ];
+	}
 
   items: ListItem[] = [
 		{ content: "one", selected: false },

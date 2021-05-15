@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JurisMapComponent implements OnInit {
 
+  layoutProps = {
+    leftGutter: true,
+    rightGutter: true,
+    rowCondensed: false,
+    gridCondensed: false,
+    gutter: true
+  }
   constructor() { }
 
   ngOnInit(): void {
