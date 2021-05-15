@@ -16,3 +16,16 @@ conda install pygeos --channel conda-forge --strict-channel-priority
 
 uvicorn main:app --reload
 
+swagger
+http://localhost:8000/docs
+
+redoc
+http://localhost:8000/redoc
+
+OpenAPI Specification
+
+``` bash
+python -m venv blog-env
+pip install -r requirements.txt
+```
+
