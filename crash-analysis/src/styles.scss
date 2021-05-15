@@ -15,8 +15,7 @@ $css--plex: true;
 @import '~carbon-components/scss/globals/scss/styles.scss';
 @import './assets/scss/carbon-overrides.scss';
 @import '~mapbox-gl/dist/mapbox-gl.css';
-
-
+@import '~@carbon/charts/styles/styles.scss';
 // landing page style
 .bx--tabs--scrollable__nav {
   z-index: 500;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CrashDashboardComponent } from './components/crash-dashboard/crash-dashboard.component';
 import { CrashInfoComponent } from './components/details/crash-info/crash-info.component';
 import { CrashMapComponent } from './components/map-pages/crash-map/crash-map.component';
 import { JurisMapComponent } from './components/map-pages/juris-map/juris-map.component';
@@ -19,6 +20,10 @@ const routes: Routes = [
 		pathMatch: 'full'
 	},
   {
+    path: 'dashboard',
+    component: CrashDashboardComponent
+  },
+  {
     path: 'map/crash-map',
     component: CrashMapComponent
   },
@@ -32,10 +37,6 @@ const routes: Routes = [
   },
 	{
 		path: 'repos',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
-	},
-  {
-		path: 'dashboard',
 		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
 	},
   {

@@ -1,0 +1,32 @@
+<div class="bx--grid">
+  <div ibmRow>
+    <div ibmCol [columnNumbers]="{'lg': 2}">left
+    </div>
+
+    <div ibmCol [columnNumbers]="{'lg': 14}" style="height: calc(100vh - 90px);">
+      <div class="bx--grid bx--grid--narrow" style="height: 100%;">
+        <div class="bx--row" style="height: 50%;">
+          <div class="bx--col">
+            <ibm-area-chart [data]="data" [options]="options"></ibm-area-chart>
+          </div>
+          <div class="bx--col">
+            <ibm-grouped-bar-chart [data]="data2" [options]="options2"></ibm-grouped-bar-chart>
+          </div>
+        </div>
+        <div class="bx--row" style="height: 50%;">
+          <div class="bx--col">
+            <ibm-simple-bar-chart [data]="data1" [options]="options1"></ibm-simple-bar-chart>
+          </div>
+          <div class="bx--col">
+            <ibm-area-chart [data]="data3" [options]="options3"></ibm-area-chart>
+          </div>
+          <div class="bx--col">
+            <app-map-canvas></app-map-canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
