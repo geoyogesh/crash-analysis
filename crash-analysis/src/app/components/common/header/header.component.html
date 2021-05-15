@@ -1,4 +1,4 @@
-<ibm-header [route]="['/home']" name="Crash Analysis" [brand]="brandTemplate">
+<ibm-header name="Crash Analysis" [brand]="brandTemplate">
 	<ibm-header-navigation ariaLabel="Crash Analysis">
     <ibm-header-item [route]="['/dashboard']">Dashboard</ibm-header-item>
     <ibm-header-item [route]="['/summary']">Summary/Export</ibm-header-item>
@@ -31,7 +31,7 @@
 
 
 <ng-template #brandTemplate>
-  <a class="bx--header__name">
+  <a class="bx--header__name" [routerLink]="['/home']">
     <ibm-icon-carbon size="32" style="stroke:white;fill:white"></ibm-icon-carbon>
     <span class="bx--header__name--prefix">Crash</span>
     Analysis

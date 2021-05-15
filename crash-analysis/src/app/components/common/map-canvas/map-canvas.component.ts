@@ -26,8 +26,8 @@ export class MapCanvasComponent implements OnInit, AfterViewInit {
     this.map = new mapboxgl.Map({
       container: this.mapEl.nativeElement,
       style: 'mapbox://styles/mapbox/streets-v11',
-      zoom: 3,
-      center: [-92.7335869233902, 39.40892456030255], // start at USA zoom level
+      zoom: 6, // 3,
+      center: [-77.79218893867733, 37.82963522630058] // [-92.7335869233902, 39.40892456030255], // start at USA zoom level
     });
     // Add navigation control (the +/- zoom buttons)
     this.map.addControl(
@@ -68,12 +68,6 @@ export class MapCanvasComponent implements OnInit, AfterViewInit {
       speed: 0.3
       });
       */
-      this.map.flyTo({
-        center: [-77.79218893867733, 37.82963522630058],
-        zoom: 6,
-        //pitch: 50,
-        speed: 0.3,
-      });
     });
 
     // fix to fill the mapbox to full size during map load

@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CrashDashboardComponent } from './components/crash-dashboard/crash-dashboard.component';
 import { CrashInfoComponent } from './components/details/crash-info/crash-info.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { CrashMapComponent } from './components/map-pages/crash-map/crash-map.component';
 import { JurisMapComponent } from './components/map-pages/juris-map/juris-map.component';
+import { RepoPageComponent } from './components/repositories/repo-page/repo-page.component';
 
 const routes: Routes = [
   {
 		path: '',
-		loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+		component: LandingPageComponent
 	},
   {
 		path: 'home',
-		loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+		component: LandingPageComponent
 	},
   {
 		path: 'map',
@@ -37,23 +39,23 @@ const routes: Routes = [
   },
 	{
 		path: 'repos',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+		component: RepoPageComponent
 	},
   {
 		path: 'summary',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+		component: RepoPageComponent
 	},
   {
 		path: 'juris-map',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+		component: RepoPageComponent
 	},
   {
 		path: 'crash-info',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+		component: RepoPageComponent
 	},
   {
 		path: 'route-info',
-		loadChildren: () => import('./repositories/repositories.module').then(m => m.RepositoriesModule)
+		component: RepoPageComponent
 	},
 	{
 		path: '',
