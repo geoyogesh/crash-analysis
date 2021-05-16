@@ -29,3 +29,5 @@ python -m venv blog-env
 pip install -r requirements.txt
 ```
 
+Tableplus
+
