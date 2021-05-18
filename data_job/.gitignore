@@ -2,3 +2,7 @@ data/**.*
 !data/.gitkeep
 output/**.*
 !output/.gitkeep
+scripts/source
+!scripts/source/.gitkeep
+scripts/output
+!scripts/output/.gitkeep
