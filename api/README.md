@@ -1,17 +1,7 @@
 
 development
 
-python -m venv crash-analysis
 
-source crash-analysis/bin/activate
-
-pip install fastapi
-pip install uvicorn
-
-conda config --env --add channels conda-forge
-conda config --env --set channel_priority strict
-conda install python=3 geopandas --channel conda-forge --strict-channel-priority
-conda install pygeos --channel conda-forge --strict-channel-priority
 
 
 uvicorn main:app --reload
@@ -31,3 +21,15 @@ pip install -r requirements.txt
 
 Tableplus
 
+```
+conda create -n crash_analysis
+conda activate crash_analysis
+conda config --env --add channels conda-forge
+conda config --env --set channel_priority strict
+conda install python=3 geopandas
+conda install fastapi
+conda install uvicorn
+conda install pygeos 
+```
+
+/usr/local/anaconda3/envs/crash_analysis
